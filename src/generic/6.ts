@@ -13,9 +13,12 @@ type User = {
   email: string;
   password: string;
 }
-
-function createOrUpdateUser(initialValues: User) {
+type UserKey = keyof User;
+function createOrUpdateUser(updateValues: Partial<Pick<User, 'email' | 'password'>>) {
   // Оновлення користувача
+  return {
+    ...updateValues,
+  }
 }
 
 createOrUpdateUser({ email: 'user@mail.com', password: 'password123' });
