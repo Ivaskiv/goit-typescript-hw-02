@@ -14,7 +14,7 @@ type User = {
   password: string;
 }
 type UserKey = keyof User;
-function createOrUpdateUser(updateValues: Partial<Pick<User, 'email' | 'password'>>) {
+function createOrUpdateUser(updateValues: Partial<User>) {
   // Оновлення користувача
   return {
     ...updateValues,

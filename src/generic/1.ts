@@ -15,4 +15,3 @@ getPromise<[string, number]>()
 });
 
 export { };
-
